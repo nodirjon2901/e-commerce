@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <style>
+    .input {
+      width: 100px;
+      height: 30px;
+      font-size: 16px;
+      border: 1px solid gray;
+      border-radius: 5px;
+    }
+
+    .button {
+      background: cornflowerblue;
+      width: 100px;
+      height: 30px;
+      font-size: 16px;
+      border: 1px solid gray;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+<!--/*@thymesVar id="AuthDto" type="uz.pdp.ecommercedemo.domain.dto.request.AuthDto"*/-->
+<form th:action="@{/auth/login}" method="post" th:object="${AuthDto}">
+  <input class="input" type="text" name="username" placeholder="username" required>
+  <input class="input" type="password" name="password" placeholder="password" required>
+  <button class="button">Login</button>
+</form>
+</body>
+</html>

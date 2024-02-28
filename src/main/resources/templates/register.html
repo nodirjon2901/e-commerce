@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <style>
+        .input {
+            width: 100px;
+            height: 30px;
+            font-size: 16px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+
+        .button {
+            background: cornflowerblue;
+            width: 100px;
+            height: 30px;
+            font-size: 16px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<form class="sign-form" action="/auth/register" method="post">
+    <input class="input" type="text" name="name" placeholder="name" required>
+    <input class="input" type="text" name="username" placeholder="username" required>
+    <input class="input" type="password" name="password" placeholder="password" required>
+    <input class="input" type="number" name="balance" placeholder="balance" required>
+    <div class="roles">
+        <label><input type="checkbox" name="roles" value="USER" class="roleCheck"/>
+            USER</label>
+        <label><input type="checkbox" name="roles" value="ADMIN" class="roleCheck"/>
+            ADMIN</label>
+        <label><input type="checkbox" name="roles" value="ACCOUNTER" class="roleCheck"/>
+            ACCOUNTER</label>
+<!--        <label><input type="checkbox" name="roles" value="SUPER_ADMIN" class="roleCheck"/>-->
+<!--            SUPER_ADMIN</label>-->
+    </div>
+    <button class="button">Submit</button>
+</form>
+</body>
+</html>
